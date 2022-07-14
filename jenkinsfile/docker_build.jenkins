@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build docker image') {
+            steps {
+
+				dir (docker/toolbox) {sh 'docker build -t my_httpd:1.0.0 .'}
+
+            }
+        }
+    }
+}
+
