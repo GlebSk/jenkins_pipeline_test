@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build docker image') {
             steps {
-		dir 'docker/toolbox'
+		dir ('docker/toolbox')
 		sh 'docker build -t my_httpd:1.0.1 .'
             }
         }
